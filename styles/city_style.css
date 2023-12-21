@@ -1,0 +1,708 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+:root {
+  --red: #6A1A2F;
+  --darkred: #6A1A2F;
+  --platinum: #e5e5e5;
+  --black: #2b2d42;
+  --white: #fff;
+  --thumb: #edf2f4;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* width */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #000000; 
+  }
+  
+  header{
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+    background-color: #6A1A2F;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  
+  header .brand{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items:center ;
+  }
+  
+  header .brand .logo{
+    width: 50%;
+  }
+  
+  header .navigation{
+    position: relative;
+  }
+  
+  header .navigation .navigation-items a{
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+  }
+  
+  header .navigation .navigation-items a:before{
+    content: '';
+    position: absolute;
+    background: rgb(255, 255, 255);
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+  }
+  
+  header .navigation .navigation-items a:hover:before{
+    width: 100%;
+  }
+  
+  .solid{
+    background-color: #6A1A2F;
+  }
+
+  .city{
+    background: url('../cities/Puri/Assets/Puri.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+  }
+
+  .city_name{
+    color: #fff;
+    font-size: 64px;
+    font-weight: 700;
+    font-family: Lato, sans-serif;
+  }
+
+  .city_info{
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .city_menu_section{
+    position: relative;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+  }
+
+  #sub_nav{
+    background-color: #fff;
+  }
+
+  .city_menu_div{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .city_menu{
+    cursor: pointer;
+    border-bottom: none;
+    transition: 0.1s linear;
+  }
+
+  .city_menu:hover{
+    border-bottom: 3px solid #6A1A2F;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 10vh;
+    width: 100%;
+  }
+
+  /* #things{
+    height: 100px;
+  } */
+
+  .city_details_section{
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .city_details_div{
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.205);
+  }
+
+  .city_details{
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+  }
+
+  .city_details_container{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .city_details_map_icon{
+    width: 30%;
+    background: url('../assets/images/map.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .city_details_icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+  }
+
+  .city_details_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .city_details_content_title{
+    /* font-family: Lato, sans-serif; */
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .city_details_content_link{
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .about_city_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+  }
+
+  .about_city_div{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 80%;
+  }
+
+  .about_city_title{
+    font-family: Lato, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #6A1A2F;
+    height: 30%;
+  }
+
+  .about_city_description{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+  }
+
+  .city_place_list_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+  }
+
+  .city_place_list_div{
+    width: 80%;
+  }
+
+  .city_place_list_title{
+    font-family: Lato, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #6A1A2F;
+    height: 30%;
+  }
+
+  .city_place_list_sub_title{
+    font-size: 14px;
+    font-weight: 400;
+    color: gray;
+    height: 30%;
+  }
+
+  .city_activity_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px 10px 0px;
+  }
+
+  .city_activity_div{
+    width: 80%;
+  }
+
+  .city_activity_title{
+    font-family: Lato, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #6A1A2F;
+    height: 30%;
+  }
+
+  .city_activity_sub_title{
+    font-size: 14px;
+    font-weight: 400;
+    color: gray;
+    height: 30%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .container {
+    max-width: 83%;
+    margin: 0 auto;
+    height: 62vh;
+  }
+  
+  .cards {
+    display: flex;
+    height: 60vh;
+    padding: 25px 25px;
+    background-color: none;
+    list-style: none;
+    overflow-x: scroll;
+    /* scroll-snap-type: x mandatory; */
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+    padding: 20px;
+    background: rgba( 106, 26, 47, 0.1 );
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 2px );
+    scroll-snap-align: start;
+    transition: all 0.2s;
+  }
+  
+  .card:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  /* .card:hover {
+    color: var(--white);
+    background: var(--red);
+  } */
+  
+  .card_img_div{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .jagannathTemple{
+    background: url('../cities/Puri/Assets/jagannath_temple.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .konarkTemple{
+    background: url('../cities/Puri/Assets/konark_temple.webp');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .puriSeaBeach{
+    background: url('../cities/Puri/Assets/puri_sea_beach.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .chandravaga{
+    background: url('../cities/Puri/Assets/Chandrabhaga_Beach.png');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .marineDrive{
+    background: url('../cities/Puri/Assets/marine_drive.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .raghurajpur{
+    background: url('../cities/Puri/Assets/raghurajpur_art_village.webp');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .lokanath{
+    background: url('../cities/Puri/Assets/loknath_temple.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .mausiMa{
+    background: url('../cities/Puri/Assets/mausi-maa-temple.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .sakhigopal{
+    background: url('../cities/Puri/Assets/sakhigopal.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .satapada{
+    background: url('../cities/Puri/Assets/satapada.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .puri_activity_1{
+    background: url('../cities/Puri/Assets/Horse_and_camel_ride.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .puri_activity_2{
+    background: url('../cities/Puri/Assets/waterpark.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .puri_activity_3{
+    background: url('../cities/Puri/Assets/watersports.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .puri_activity_4{
+    background: url('../cities/Puri/Assets/Konark-festival.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .puri_activity_5{
+    background: url('../cities/Puri/Assets/ECO_retreate.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .card .card-title {
+    font-size: 20px;
+  }
+  
+  .card .card-content {
+    margin: 20px 0;
+    max-width: 85%;
+  }
+  
+  .card .card-link-wrapper {
+    margin-top: auto;
+  }
+  
+  .card .card-link {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: var(--red);
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  
+  .card:hover .card-link {
+    background: var(--darkred);
+  }
+  
+  .cards::-webkit-scrollbar {
+    height: 12px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb,
+  .cards::-webkit-scrollbar-track {
+    border-radius: 92px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb {
+    background: var(--darkred);
+  }
+  
+  .cards::-webkit-scrollbar-track {
+    background: var(--thumb);
+  }
+  
+  @media (min-width: 500px) {
+    .card {
+      flex-basis: calc(50% - 10px);
+    }
+  
+    .card:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  
+  @media (min-width: 700px) {
+    .card {
+      flex-basis: calc(calc(100% / 3) - 20px);
+    }
+  
+    .card:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  
+  @media (min-width: 1100px) {
+    .card {
+      flex-basis: calc(25% - 30px);
+    }
+  
+    .card:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .how_to_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px 10px 0px;
+  }
+
+  .how_to_div{
+    width: 80%;
+  }
+
+  .how_to_div_title{
+    font-family: Lato, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #6A1A2F;
+    height: 30%;
+  }
+
+  .how_to_div_sub_title{
+    font-size: 14px;
+    font-weight: 400;
+    color: gray;
+    height: 30%;
+  }
+
+  .travel_methods{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0px;
+  }
+
+  .by_medium{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+
+  .by_medium_title_div{
+    display: flex;
+  }
+
+  .by_medium_icon i{
+    color: #6A1A2F;
+    margin: 0px 10px 0px 0px;
+  }
+
+  .by_medium_title{
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .by_medium_desc{
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+
+  .other_info_section{
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .other_info_div{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .other_info_title{
+    font-family: Lato, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #6A1A2F;
+  }
+
+  .other_info_desc{
+    font-size: 14px;
+    font-weight: 400;
+    color: gray;
+  }
+
+  .other_info_link_div{
+    height: 50%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .other_info_link{
+    background-color: #daeaff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 50%;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-size: larger;
+  }
+
+  .other_info_link:hover{
+    box-shadow: rgba(59, 59, 59, 0.219) 0px 7px 29px 0px;
+  }
+
+
+
+  .footer_section{
+    background-color: #2b2b2b;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer_div{
+    background: url('../assets/images/navigation.png');
+    background-size: 12%;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  .footer{
+    width: 20%;
+    height: 100%;
+  }
+  
+  .about_head, .navigation_head, .extra_link_head, .connect_head{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Lato, sans-serif;
+    margin: 20px 0px;
+    color: #c4c4c4;
+  }
+  
+  .about, .navigation .nav_link a, .extra_link .nav_link a, .connect{
+    text-align: justify;
+    color: white;
+    margin: 10px 0px;
+  }
+  
+  .connect_icons{
+    margin: 10px 0px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .copyright_div{
+    width: 80%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #edf2f4;
+  }
